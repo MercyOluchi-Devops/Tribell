@@ -1,7 +1,10 @@
 function MovieCard({ movie }) {
   return (
     <div className="movie-card">
-      <img src={movie.image} alt={movie.title} />
+      <img
+  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+  alt={movie.title}
+/>
 
       <div className="movie-info">
         <h3>{movie.title}</h3>
@@ -10,7 +13,7 @@ function MovieCard({ movie }) {
           {movie.year} • {movie.genre}
         </p>
 
-        <span>★ {movie.rating}</span>
+        <span>★ {Trending}</span>
       </div>
     </div>
   )
